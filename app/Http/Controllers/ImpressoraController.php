@@ -8,7 +8,7 @@ use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Ditep\Impressora;
-use validator;
+use Validator;
 
 
 class ImpressoraController extends Controller
@@ -29,9 +29,12 @@ class ImpressoraController extends Controller
   public function postAdd(Request $request)
   {
       $dataForm = $request->all();
-      $validator = validator($dataForm, $rules);
+//validação
+      $validator = validator($dataForm, Impressora::$rules);
       if( $validator->fails() ){
-        return redirect('ditep/impressoras/add')->withErrors($validator)->withInputs();
+        return redirect("ditep/impressoras/add")
+                        ->withErrors($validator)
+                        ->withInput();
       }
       Impressora::create($dataForm);
       return redirect ('ditep/impressoras');
@@ -47,6 +50,13 @@ class ImpressoraController extends Controller
   public function postEdt(Request $request, $id)
   {
       $dataForm = $request->except('_token');
+//validação
+      $validator = validator($dataForm, Impressora::$rules);
+      if( $validator->fails() ){
+        return redirect("ditep/impressoras/edt/e/{$id}")
+                        ->withErrors($validator)
+                        ->withInput();
+        }
       Impressora::where('id', $id)->update($dataForm);
       return redirect('ditep/impressoras');
   }

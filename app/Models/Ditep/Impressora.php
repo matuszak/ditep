@@ -10,6 +10,6 @@ class impressora extends Model
 
 //regras de validação para impressoras;
     static $rules = [
-      'modelo' => 'required'|'min:3'|'max:30',
+      'modelo' => 'required|min:3|max:30',
     ];
 }
