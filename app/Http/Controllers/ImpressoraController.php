@@ -17,7 +17,7 @@ class ImpressoraController extends Controller
   public function getIndex()
   {
       $titulo = strtoupper("Impressoras Cadastradas");
-      $impressoras = Impressora::paginate(15);
+      $impressoras = Impressora::orderBy('id', 'desc')->paginate(15);
       return view('ditep.impressora.index', compact('titulo', 'impressoras'));
   }
 //add method
