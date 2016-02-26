@@ -1,14 +1,17 @@
 #REGISTRO DE IMPRESSORA
---CORRIGIDO BUG PARA MOSTRAR VALIDAÇÃO DE RESULTADOS;
---MELHORADO VALIDAÇÃO COM BOOTSTRAP DEMARCADORES;
---PAGINA DE EXCLUSÃO DE IMPRESSORA;
---PAGINA DE CADASTRO DE IMPRESSORA;
---PAGINA DE EDIÇÃO DE IMPRESSORA CADASTRADA;
+--corrigido bug para mostrar validação de resultados;
+--melhorado validação com bootstrap demarcadores;
+--pagina de exclusão de impressora;
+--pagina de cadastro de impressora;
+--pagina de edição de impressora cadastrada;
 ---------25/02/2016
---MUDANÇA NA EXIBIÇÃO DOS DADOS DE IMPRESSORA PELO MODO DECRESCENTE;
---MUDANÇA NA PARTE DE LAYOUT;
---MUDANÇA NO ARQUIVO app>Http>Controllers>ImpressoraController;
---Mudança arquivo RESOURCES>VIEWS>DITEP>IMPRESSORA>INDEX.BLADE.PHP
---Mudança arquivo RESOURCES>VIEWS>DITEP>IMPRESSORA>FORM.BLADE.PHP
---Mudança arquivo RESOURCES>VIEWS>LAYOUT>DITEP>DEFAULT.BLADE.PHP
+--mudança na exibição dos dados de impressora pelo modo decrescente;
+--mudança na parte de layout;
+--mudança no arquivo app>http>controllers>impressoracontroller;
+--mudança arquivo resources>views>ditep>impressora>index.blade.php
+--mudança arquivo resources>views>ditep>impressora>form.blade.php
+--mudança arquivo resources>views>layout>ditep>default.blade.php
 ----------25/02/2016
+--Indentação do código nas paginas resources>views>ditep>impressora>form.blade.php
+--Indentação do código nas paginas resources>views>ditep>impressora>index.blade.php
+--Adicionado extensão .blade ao arquivo resources>views>ditep>layouts>ditep>skeleton.blade.php
