@@ -15,6 +15,6 @@ class cliente extends Model
       'materia' => 'required|max:25',
       'email' => 'required|min:8|max:50',
       'fone' => 'required|min:8|max:15', //min sem ddd, max +55(69)
-      'fone2'
+      'fone2' => 'min:8|max:15'
     ];
 }
