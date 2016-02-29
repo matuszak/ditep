@@ -1,7 +1,7 @@
 @extends('layouts.ditep.default')
 
 @section('content')
-    <h1>impressoras cadastradas {!! $impressoras->count() !!}</h1>
+    <h1>impressoras cadastradas: [ {!! $impressoras->count() !!} ]</h1>
 
     <div class="table-responsive">
         <table class="table table-striped table-bordered table-hover table-condensed">

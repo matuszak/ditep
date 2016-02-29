@@ -15,3 +15,13 @@
 --Indentação do código nas paginas resources>views>ditep>impressora>form.blade.php
 --Indentação do código nas paginas resources>views>ditep>impressora>index.blade.php
 --Adicionado extensão .blade ao arquivo resources>views>ditep>layouts>ditep>skeleton.blade.php
+
+#REGISTRO DE CLIENTES
+----------28/02/2016
+--Trabalhdo Model Cliente;
+--trabalhado ClienteController;
+--Criação do Form.blade.php e index.blade.php para o Model Cliente;
+--Modificação do Route.php para acessar o ClienteController;
+--Modificação do menu.blade.php para linkar clientes;
+--Acréscimo do Pacote linguagem "pt-BR" em Resource/lang;
+--Edição de "locale" em config para "pt-BR";

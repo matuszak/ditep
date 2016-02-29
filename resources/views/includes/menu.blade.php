@@ -18,7 +18,7 @@
         <li><a href="#">Impressões</a></li>
         <li><a href="#">Toners</a></li>
         <li><a href="/ditep/impressoras">Impressoras</a></li>
-        <li><a href="#">Clientes</a></li>
+        <li><a href="/ditep/clientes">Clientes</a></li>
         <li><a href="#">Usuários</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Relatórios <span class="caret"></span></a>
