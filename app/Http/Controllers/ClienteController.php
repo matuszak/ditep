@@ -18,7 +18,7 @@ class ClienteController extends Controller
       $titulo = strtoupper("Clientes Cadastrados");
 
       $clientes = Cliente::orderBy('nome')->paginate(15);
-
+      $setores = DB::table('setores')->select('nome as setor_nome')->get();
        return view('ditep.cliente.index', compact('titulo', 'clientes', 'setores'));
   }
 //add method

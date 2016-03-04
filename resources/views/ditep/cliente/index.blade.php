@@ -19,11 +19,14 @@
             <tr><p class='text-right text-uppercase'>{!! Html::link('ditep/clientes/add', 'Novo registro', ['class' => 'btn btn-success']) !!}</p></tr>
 
             @forelse ($clientes as $cliente)
+
                 <tr>
                     <td><p class='text-uppercase'>{{$cliente->id}}</p></td>
                     <td><p class='text-uppercase'>{{$cliente->nome}}</p></td>
                     <td>
-                        <p class='text-uppercase'>{{ $cliente->id_setor }}</p>
+
+                            <p class='text-uppercase'>{{ $cliente->id_setor }}</p>
+
                     </td>
                     <td><p class='text-uppercase'>{{$cliente->materia}}</p></td>
                     <td><p class='text-lowercase'>{{$cliente->email}}</p></td>
