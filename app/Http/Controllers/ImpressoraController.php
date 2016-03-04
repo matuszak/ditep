@@ -24,7 +24,9 @@ class ImpressoraController extends Controller
   public function getAdd()
   {
       $titulo = strtoupper('Cadastro de impressora');
-      return view('ditep.impressora.form', compact('titulo'));
+      $setores = DB::table('setores')->lists('id', 'nome');
+
+      return view('ditep.impressora.form', compact('titulo', 'setores'));
   }
   public function postAdd(Request $request)
   {

@@ -6,6 +6,7 @@ Route::group(['middleware' => ['web']], function () {
   Route::group(['prefix' => 'ditep'], function(){
     Route::controller('impressoras', 'ImpressoraController');
     Route::controller('clientes', 'ClienteController');
+    Route::controller('setores', 'SetorController');
   });
 });
 

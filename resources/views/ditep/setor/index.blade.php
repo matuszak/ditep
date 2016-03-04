@@ -1,29 +1,29 @@
 @extends('layouts.ditep.default')
 
 @section('content')
-    <h1 class="text-uppercase">impressoras cadastradas: [ {!! $impressoras->count() !!} ]</h1>
+    <h1 class="text-uppercase">setores cadastrados: [ {!! $setores->count() !!} ]</h1>
 
     <div class="table-responsive">
         <table class="table table-striped table-bordered table-hover table-condensed">
             <tr>
                 
-                <th class="text-uppercase">MODELO</th>
+                <th class="text-uppercase">Nome do Setor</th>
                 <th class="text-center text-uppercase" width="83">GESTÃO</th>
             </tr>
-            <tr><p class='text-right text-uppercase'>{!! Html::link('ditep/impressoras/add', 'Novo registro', ['class' => 'btn btn-success']) !!}</p></tr>
+            <tr><p class='text-right text-uppercase'>{!! Html::link('ditep/setores/add', 'Novo registro', ['class' => 'btn btn-success']) !!}</p></tr>
 
-            @forelse ($impressoras as $impressora)
+            @forelse ($setores as $setor)
                 <tr>
-                    <td><p class='text-uppercase'>{{$impressora->modelo}}</p></td>
+                    <td><p class='text-uppercase'>{{$setor->nome}}</p></td>
                     <td>
                         <!-- (Botão para editar) -->
-                        <a href="/ditep/impressoras/edt/e/{{$impressora->id}}">
+                        <a href="/ditep/setores/edt/e/{{$setor->id}}">
                             <button type="button" class="btn btn-primary btn-sm">
                                 <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                             </button>
                         </a>
                         <!-- (Botão para excluir/deletar) -->
-                        <a href="/ditep/impressoras/del/d/{{$impressora->id}}">
+                        <a href="/ditep/setores/del/d/{{$setor->id}}">
                             <button type="button" class="btn btn-danger btn-sm">
                                 <span class="glyphicon glyphicon-erase" aria-hidden="true"></span>
                             </button>
@@ -35,7 +35,7 @@
                 <p class="text-uppercase">
                     <b>
                         A base de informações está vazia...
-                        {!! Html::link('ditep/impressoras/add', 'Clique aqui para adicionar um novo registro!') !!}
+                        {!! Html::link('ditep/setores/add', 'Clique aqui para adicionar um novo registro!') !!}
                     </b>
                 </p>
 
@@ -43,6 +43,6 @@
 
         </table>
         <!--paginação -->
-        <div class="text-center">{!! $impressoras->render() !!}</div>
+        <div class="text-center">{!! $setores->render() !!}</div>
     </div>
 @endsection

@@ -15,13 +15,14 @@ class CreateClientesTable extends Migration
         Schema::create('clientes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome');
-            $table->string('setor');
+            $table->integer('id_setor')->unsigned();
             $table->string('materia');
             $table->string('email');
             $table->string('fone', 15);
             $table->string('fone2', 15);
             $table->softDeletes();
             $table->timestamps();
+            $table->foreign('id_setor')->references('id')->on('setores');
         });
     }
 
