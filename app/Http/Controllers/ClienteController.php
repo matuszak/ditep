@@ -18,14 +18,14 @@ class ClienteController extends Controller
       $titulo = strtoupper("Clientes Cadastrados");
 
       $clientes = Cliente::orderBy('nome')->paginate(15);
-      $setores = DB::table('setores')->select('nome as setor_nome')->get();
+
        return view('ditep.cliente.index', compact('titulo', 'clientes', 'setores'));
   }
 //add method
   public function getAdd()
   {
       //$setores = Setor::orderBy('nome')->lists('nome', 'id');
-      $setores = Setor::orderBy('nome')->get();
+      $setores = Setor::orderBy('nome')->lists('nome', 'id');
       $titulo = strtoupper('Cadastro de clientes');
       return view('ditep.cliente.form', compact('titulo', 'setores'));
   }
@@ -48,8 +48,7 @@ class ClienteController extends Controller
   {
       $titulo = strtoupper("Editando clientes");
       $cliente = Cliente::find($id);
-      $setorLoc = $cliente->id_setor;
-      $setores = Setor::get();
+      $setores = Setor::lists('nome', 'id');
       return view('ditep.cliente.form', ['id' => $id, 'cliente' => $cliente], compact('titulo', 'acao', 'id', 'cliente', 'setores'));
   }
   public function postEdt(Request $request, $id)
@@ -70,7 +69,8 @@ class ClienteController extends Controller
   public function getDel($acao, $id)
   {
       $cliente = Cliente::find($id);
-      return view('ditep.cliente.form', ['id' => $id, 'cliente' => $cliente], compact('id', 'acao', 'cliente'));
+      $setores = Setor::lists('nome', 'id');
+      return view('ditep.cliente.form', ['id' => $id, 'cliente' => $cliente], compact('id', 'acao', 'cliente', 'setores'));
   }
   public function postDel(Request $request, $id)
   {

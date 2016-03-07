@@ -42,3 +42,9 @@
 --Adicionado busca na variavél $titulo, caso não econtre lança título padrão a página..
 --Tentativa de ajustar exbição de todos os dados cadastrados no cadastro de clientes, no caso para exbir o setor, deve-se buscar pelo id setor mas, não exibe...
 
+#CORREÇÃO DE REGISTRO DE CLIENTES
+----------07/03/2016
+--Correção na listagem de itens por outra tabela, no caso o select agora busca informações da tabela setor e mostra na tabela cliente...
+--Mudanças visuais na parte de exclusão de cliente os campos ficam inativos para edição de qualquer um sendo apenas confirmatórios a exclusão
+--Mudanças de cores nos botões para cada ação...
+%%%-> BUG: ainda não resolvido problema na listagem de clientes onde deveria mostrar o setor.. apenas mostro o id_setor, não é ineteressante!

@@ -25,7 +25,7 @@
                     <td><p class='text-uppercase'>{{$cliente->nome}}</p></td>
                     <td>
 
-                            <p class='text-uppercase'>{{ $cliente->id_setor }}</p>
+                        <p class='text-uppercase'>{{ $cliente->id_setor }}</p>
 
                     </td>
                     <td><p class='text-uppercase'>{{$cliente->materia}}</p></td>
