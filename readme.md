@@ -37,6 +37,8 @@ do Ultimo para o primeiro registro de informaçao
 --Modificação do menu.blade.php para linkar clientes;
 --Acréscimo do Pacote linguagem "pt-BR" em Resource/lang;
 --Edição de "locale" em config para "pt-BR";
+------------09/03/2016
+--Acrescimo do validador email para gara cliente
 
 #REGISTRO DE IMPRESSORA
 --corrigido bug para mostrar validação de resultados;
@@ -57,11 +59,3 @@ do Ultimo para o primeiro registro de informaçao
 --Indentação do código nas paginas resources>views>ditep>impressora>form.blade.php
 --Indentação do código nas paginas resources>views>ditep>impressora>index.blade.php
 --Adicionado extensão .blade ao arquivo resources>views>ditep>layouts>ditep>skeleton.blade.php
-
-
-
-
-
-
-
-
