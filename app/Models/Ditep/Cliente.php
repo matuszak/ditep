@@ -18,4 +18,15 @@ class Cliente extends Model
       'fone2'
     ];
 
+
+    public function getNomeSetor(){
+        return Setor::where('id', $this->id_setor)->first()->nome;
+    }
+
+    /*
+
+    public function setor(){
+        return $this->belongsTo('App\Models\Ditep\Setor');
+    }
+    */
 }

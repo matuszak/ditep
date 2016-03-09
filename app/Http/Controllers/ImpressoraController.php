@@ -16,16 +16,15 @@ class ImpressoraController extends Controller
 
   public function getIndex()
   {
-      $titulo = strtoupper("Impressoras Cadastradas");
+      $titulo = strtoupper("DITEP - GESTÃO DE IMPRESSORAS");
       $impressoras = Impressora::orderBy('id', 'desc')->paginate(15);
       return view('ditep.impressora.index', compact('titulo', 'impressoras'));
   }
 //add method
   public function getAdd()
   {
-      $titulo = strtoupper('Cadastro de impressora');
+      $titulo = strtoupper('DITEP - GESTÃO DE IMPRESSORAS > adicionar');
       $setores = DB::table('setores')->lists('id', 'nome');
-
       return view('ditep.impressora.form', compact('titulo', 'setores'));
   }
   public function postAdd(Request $request)
@@ -45,7 +44,7 @@ class ImpressoraController extends Controller
 //edit method
   public function getEdt($acao, $id)
   {
-      $titulo = strtoupper("Editando impressora");
+      $titulo = strtoupper("DITEP - GESTÃO DE IMPRESSORAS > editar");
       $impressora = Impressora::find($id);
       return view('ditep.impressora.form', ['id' => $id, 'impressora' => $impressora], compact('titulo', 'acao', 'id', 'impressora'));
   }
@@ -66,8 +65,9 @@ class ImpressoraController extends Controller
   //erase method
   public function getDel($acao, $id)
   {
+      $titulo = strtoupper("DITEP - GESTÃO DE IMPRESSORAS > deletar/excluir");
       $impressora = Impressora::find($id);
-      return view('ditep.impressora.form', ['id' => $id, 'impressora' => $impressora], compact('id', 'acao', 'impressora'));
+      return view('ditep.impressora.form', ['id' => $id, 'impressora' => $impressora], compact('id', 'acao', 'impressora', 'titulo'));
   }
   public function postDel(Request $request, $id)
   {

@@ -4,7 +4,7 @@
     <?php
     $tiADD = strtoupper("Incluir novo setor");
     $tiEDT = strtoupper("Editar setor");
-    $tiDEL = strtoupper("Apagar setor (AtenÇÃo)");
+    $tiDEL = strtoupper("<h1><font color='red'>Apagar setor (AtenÇÃo)</font></h1>");
     ?>
     @if (count($errors) > 0)
         <div class="alert alert-danger" xmlns="http://www.w3.org/1999/html">
@@ -17,31 +17,37 @@
     @endif
 
     @if( (isset($acao)) and (isset($setor)) )
-
         @if($acao == 'e')
-
+                <!-- AÇÃO DE EDITAR -->
             <h1 class="text-uppercase"><?php echo ($tiEDT); ?></h1><br>
+
             {!! Form::open( ['url' => "ditep/setores/edt/$setor->id", 'class' => 'form'] ) !!}
 
+            {!! Form::label('nome', 'Nome') !!}{!! Form::text('nome', isset($setor->nome) ? $setor->nome : null, ['placeholder' => 'Print Model', 'class' => 'form-control'] ) !!}
+            <br>
+            <!--botao Editar -->
+            {!! Form::submit('Editar', ['class' => 'btn btn-primary text-uppercase']) !!}
         @else
-
-            <h1 class="text-uppercase"><font color="red"><?php echo ($tiDEL); ?></font></h1><br>
+                    <!-- AÇÃO DE DELETAR/APAGAR -->
+            <h1 class="text-uppercase"><?php echo ($tiDEL); ?><br>
             {!! Form::open( ['url' => "ditep/setores/del/$setor->id", 'class' => 'form'] ) !!}
             <input type="hidden" name="confirma" value="true">
 
+                {!! Form::label('nome', 'Nome') !!}{!! Form::text('nome', isset($setor->nome) ? $setor->nome : null, ['placeholder' => 'Print Model', 'class' => 'form-control', 'disabled'] ) !!}
+            <br>
+            <input type="hidden" name="confirma" value="true">
+            <!--botao Apagar -->
+            {!! Form::submit('Apagar', ['class' => 'btn btn-danger text-uppercase']) !!}
         @endif
-
     @else
-
+                <!-- AÇÃO DE INCLUIR/ADICIONAR -->
         <h1 class="text-uppercase"><?php echo ($tiADD); ?></h1><br>
         {!! Form::open( ['url' => "ditep/setores/add", 'class' => 'form'] ) !!}
-
-        @endif
-
-        <!--<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>"> -->
-        {!! Form::text('nome', isset($setor->nome) ? $setor->nome : null, ['placeholder' => 'Nome do Departamento/Setor', 'class' => 'form-control'] ) !!}
+        {!! Form::label('nome', 'Nome') !!}{!! Form::text('nome', isset($setor->nome) ? $setor->nome : null, ['placeholder' => 'Nome para o setor', 'class' => 'form-control'] ) !!}
         <br>
-        {!! Form::submit('Gravar', ['class' => 'btn btn-default']) !!}
-        {!! Form::close() !!}
+        <!--botao Novo -->
+        {!! Form::submit('Incluir', ['class' => 'btn btn-success text-uppercase']) !!}
+    @endif
 
+    {!! Form::close() !!}
 @endsection

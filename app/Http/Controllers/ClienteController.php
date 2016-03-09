@@ -15,18 +15,16 @@ class ClienteController extends Controller
 {
   public function getIndex()
   {
-      $titulo = strtoupper("Clientes Cadastrados");
-
+      $titulo = strtoupper("DITEP - GESTÃO DE CLIENTES");
       $clientes = Cliente::orderBy('nome')->paginate(15);
-
-       return view('ditep.cliente.index', compact('titulo', 'clientes', 'setores'));
+      return view('ditep.cliente.index', compact('titulo', 'clientes'));
   }
 //add method
   public function getAdd()
   {
+      $titulo = strtoupper('DITEP - GESTÃO DE CLIENTES > adicionar');
       //$setores = Setor::orderBy('nome')->lists('nome', 'id');
       $setores = Setor::orderBy('nome')->lists('nome', 'id');
-      $titulo = strtoupper('Cadastro de clientes');
       return view('ditep.cliente.form', compact('titulo', 'setores'));
   }
   public function postAdd(Request $request)
@@ -46,7 +44,7 @@ class ClienteController extends Controller
 //edit method
   public function getEdt($acao, $id)
   {
-      $titulo = strtoupper("Editando clientes");
+      $titulo = strtoupper('DITEP - GESTÃO DE CLIENTES > editar');
       $cliente = Cliente::find($id);
       $setores = Setor::lists('nome', 'id');
       return view('ditep.cliente.form', ['id' => $id, 'cliente' => $cliente], compact('titulo', 'acao', 'id', 'cliente', 'setores'));
@@ -68,9 +66,10 @@ class ClienteController extends Controller
   //erase method
   public function getDel($acao, $id)
   {
+      $titulo = strtoupper('DITEP - GESTÃO DE CLIENTES > deletar/excluir');
       $cliente = Cliente::find($id);
       $setores = Setor::lists('nome', 'id');
-      return view('ditep.cliente.form', ['id' => $id, 'cliente' => $cliente], compact('id', 'acao', 'cliente', 'setores'));
+      return view('ditep.cliente.form', ['id' => $id, 'cliente' => $cliente], compact('id', 'acao', 'cliente', 'setores', 'titulo'));
   }
   public function postDel(Request $request, $id)
   {

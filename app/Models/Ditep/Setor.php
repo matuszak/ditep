@@ -4,6 +4,7 @@ namespace App\Models\Ditep;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Setor extends Model
 {
     protected $table = 'setores';
@@ -14,4 +15,5 @@ class Setor extends Model
     static $rules = [
         'nome' => 'string|unique:setores,nome|required|min:3|max:30',
     ];
+
 }

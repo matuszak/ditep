@@ -14,14 +14,14 @@ class SetorController extends Controller
 {
     public function getIndex()
     {
-        $titulo = strtoupper("setores Cadastrados");
+        $titulo = strtoupper("DITEP - GESTÃO DE SETORES");
         $setores = setor::orderBy('id', 'desc')->paginate(15);
         return view('ditep.setor.index', compact('titulo', 'setores'));
     }
 //add method
     public function getAdd()
     {
-        $titulo = strtoupper('Cadastro de setor');
+        $titulo = strtoupper('DITEP - GESTÃO DE SETORES > adicionar');
         return view('ditep.setor.form', compact('titulo'));
     }
     public function postAdd(Request $request)
@@ -41,7 +41,7 @@ class SetorController extends Controller
 //edit method
     public function getEdt($acao, $id)
     {
-        $titulo = strtoupper("Editando setor");
+        $titulo = strtoupper('DITEP - GESTÃO DE IMPRESSORAS > editar');
         $setor = setor::find($id);
         return view('ditep.setor.form', ['id' => $id, 'setor' => $setor], compact('titulo', 'acao', 'id', 'setor'));
     }
@@ -62,8 +62,9 @@ class SetorController extends Controller
     //erase method
     public function getDel($acao, $id)
     {
+        $titulo = strtoupper('DITEP - GESTÃO DE IMPRESSORAS > deletar/excluir');
         $setor = setor::find($id);
-        return view('ditep.setor.form', ['id' => $id, 'setor' => $setor], compact('id', 'acao', 'setor'));
+        return view('ditep.setor.form', ['id' => $id, 'setor' => $setor], compact('id', 'acao', 'setor', '$titulo'));
     }
     public function postDel(Request $request, $id)
     {
