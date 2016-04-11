@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">DITEP</a>
+      <a class="navbar-brand" href="/ditep">DITEP</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -16,7 +16,7 @@
       <ul class="nav navbar-nav">
         <!--<li class="active"><a href="#">Toner<span class="sr-only">(current)</span></a></li>-->
         <li><a href="#">Impressões</a></li>
-        <li><a href="#">Toners</a></li>
+        <li><a href="/ditep/toners">Toners</a></li>
         <li><a href="/ditep/impressoras">Impressoras</a></li>
         <li><a href="/ditep/clientes">Clientes</a></li>
         <li><a href="#">Usuários</a></li>
@@ -24,7 +24,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Relatórios <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Toner</a></li>
+            <li><a href="/ditep/toners">Toner</a></li>
             <li><a href="#">Usuários</a></li>
             <li><a href="#"></a></li>
             <li role="separator" class="divider"></li>

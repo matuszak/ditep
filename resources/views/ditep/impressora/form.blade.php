@@ -19,7 +19,7 @@
     @if($acao == 'e')
             <!-- AÇÃO DE EDITAR -->
         <h1 class="text-uppercase"><?php echo ($tiEDT); ?></h1><br>
-        {!! Form::open( ['url' => "ditep/clientes/edt/$impressora->id", 'class' => 'form'] ) !!}
+        {!! Form::open( ['url' => "ditep/impressoras/edt/$impressora->id", 'class' => 'form'] ) !!}
 
         {!! Form::label('modelo', 'Modelo') !!}{!! Form::text('modelo', isset($impressora->modelo) ? $impressora->modelo : null, ['placeholder' => 'Modelo da impressora', 'class' => 'form-control'] ) !!}
 

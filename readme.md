@@ -1,4 +1,9 @@
 do Ultimo para o primeiro registro de informaçao
+#CORREÇÃO DE ERROS DE CADASTROS
+----------23/03/2016
+--Correção no cadastro de impressora que mandava para formulário de cliente...
+
+
 #CORREÇÃO DE REGISTRO DE CLIENTES
 ----------09/03/2016
 --Correção do bug, de não mostrar, setor, (não sei se é a melhor forma mas, dessa maneira deu certo);

@@ -1,29 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="utf-8">
-  <title>{{ $titulo or 'DITEP - Departamento de impressão de trabalhos escolares de professores' }}</title>
+  <html lang="pt-br">
+    <head>
+      <meta charset="utf-8">
+      <title class="text-uppercase">{{ $titulo or 'DITEP - Departamento de impressão de trabalhos escolares de professores' }}</title>
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css') }}">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="{{ url('assets/css/font-awesome.min.css') }}" >
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="{{ url('assets/css/bootstrap-theme.min.css') }}">
+    </head>
 
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <body>
+      @section('sidebar')
+      @include('includes.menu')
+      @show
 
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-</head>
+      <div class="container">
+        @yield('content')
+      </div>
+      <!-- jQuery JavaScript -->
+      <link rel="javascript" href="{{url('assets/js/jquery-2.2.2.min.js') }}">
+      <!-- bootstrap JavaScript -->
+      <link rel="javascript" href="{{url('assets/js/bootstrap.min.js') }}">
+    </body>
 
-<body>
-  @section('sidebar')
-  @include('includes.menu');
-  @show
-
-  <div class="container">
-    @yield('content')
-  </div>
-
-</body>
-@section('footer')
-@show
-</html>
+    @section('footer')
+    @show
+  </html>

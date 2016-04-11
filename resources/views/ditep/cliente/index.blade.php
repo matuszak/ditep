@@ -16,7 +16,7 @@
 
                 <th class="text-uppercase" width="90">GESTÃO</th>
             </tr>
-            <tr><p class='text-right text-uppercase'>{!! Html::link('ditep/clientes/add', 'Novo registro', ['class' => 'btn btn-success']) !!}</p></tr>
+            <tr><p class='text-right text-uppercase'><a href="ditep/clientes/add" class="btn btn-success"><i class="fa fa-file-text" aria-hidden="true"></i> novo registro </a></p></tr>
 
             @forelse ($clientes as $cliente)
 
@@ -37,11 +37,11 @@
                     <td class="text-center">
                         <!-- (Botão para editar) -->
                         <a href="/ditep/clientes/edt/e/{{$cliente->id}}" class="btn btn-primary btn-sm">
-                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
                         </a>
                         <!-- (Botão para excluir/deletar) -->
                         <a href="/ditep/clientes/del/d/{{$cliente->id}}" class="btn btn-danger btn-sm">
-                            <span class="glyphicon glyphicon-erase" aria-hidden="true"></span>
+                            <i class="fa fa-trash" aria-hidden="true"></i>
                         </a>
                     </td>
                 </tr>

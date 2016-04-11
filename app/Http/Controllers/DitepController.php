@@ -12,4 +12,8 @@ class DitepController extends Controller
     public function index() {
         return view('ditep.index');
     }
+
+    public function visual() {
+        return view('layouts.ditep.blank');
+    }
 }
