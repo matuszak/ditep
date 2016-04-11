@@ -16,7 +16,7 @@
 
                 <th class="text-uppercase" width="90">GESTÃO</th>
             </tr>
-            <tr><p class='text-right text-uppercase'><a href="ditep/clientes/add" class="btn btn-success"><i class="fa fa-file-text" aria-hidden="true"></i> novo registro </a></p></tr>
+            <tr><p class='text-right text-uppercase'><a href="clientes/add" class="btn btn-success"><i class="fa fa-file-text" aria-hidden="true"></i> novo registro </a></p></tr>
 
             @forelse ($clientes as $cliente)
 

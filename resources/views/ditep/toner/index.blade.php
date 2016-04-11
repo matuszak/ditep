@@ -12,7 +12,7 @@
 
                 <th class="text-uppercase" width="90">GESTÃO</th>
             </tr>
-            <tr><p class='text-right text-uppercase'><a href="ditep/toners/add" class="btn btn-success"><i class="fa fa-file-text" aria-hidden="true"></i> novo registro </a></p></tr>
+            <tr><p class='text-right text-uppercase'><a href="toners/add" class="btn btn-success"><i class="fa fa-file-text" aria-hidden="true"></i> novo registro </a></p></tr>
 
             @forelse ($toners as $toner)
                 <tr>

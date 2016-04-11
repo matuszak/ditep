@@ -10,7 +10,7 @@
 
                 <th class="text-uppercase" width="90">GESTÃO</th>
             </tr>
-            <tr><p class='text-right text-uppercase'><a href="ditep/setores/add" class="btn btn-success"><i class="fa fa-file-text" aria-hidden="true"></i> novo registro </a></p></tr>
+            <tr><p class='text-right text-uppercase'><a href="setores/add" class="btn btn-success"><i class="fa fa-file-text" aria-hidden="true"></i> novo registro </a></p></tr>
 
             @forelse ($setores as $setor)
                 <tr>
