@@ -48,7 +48,7 @@ class TonerController extends Controller
     {
         $titulo = strtoupper('DITEP - GESTÃO DE toners > editar');
         $toner = Toner::find($id);
-        $impressoras = Impressora::lists('nome', 'id');
+        $impressoras = Impressora::lists('modelo', 'id');
         return view('ditep.toner.form', ['id' => $id, 'toner' => $toner], compact('titulo', 'acao', 'id', 'toner', 'impressoras'));
     }
 
@@ -71,7 +71,7 @@ class TonerController extends Controller
     {
         $titulo = strtoupper('DITEP - GESTÃO DE toners > deletar/excluir');
         $toner = Toner::find($id);
-        $impressoras = Impressora::lists('nome', 'id');
+        $impressoras = Impressora::lists('modelo', 'id');
         return view('ditep.toner.form', ['id' => $id, 'toner' => $toner], compact('id', 'acao', 'toner', 'impressoras', 'titulo'));
     }
 

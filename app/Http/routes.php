@@ -8,6 +8,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::controller('clientes', 'ClienteController');
     Route::controller('setores', 'SetorController');
     Route::controller('toners', 'TonerController');
+    Route::controller('impressoes', 'ImpressaoController');
       Route::get('visual', 'DitepController@visual');
 
     Route::get('/', 'DitepController@index');
