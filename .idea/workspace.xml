@@ -21,46 +21,14 @@
     <favorites_list name="ditep" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ImpressaoController.php" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ImpressaoController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ImpressaoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231">
-              <caret line="28" column="90" selection-start-line="28" selection-start-column="90" selection-end-line="28" selection-end-column="90" />
+            <state vertical-scroll-proportion="0.7930622">
+              <caret line="39" column="32" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="32" />
               <folding>
                 <element signature="e#40#71#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/ditep/impressao/form.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4669653">
-              <caret line="116" column="127" selection-start-line="116" selection-start-column="127" selection-end-line="116" selection-end-column="127" />
-              <folding>
-                <marker date="1460575877888" expanded="true" signature="2450:3836" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="2464:3834" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="2495:3694" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="4137:4401" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="4151:4399" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="4535:4741" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="4549:4739" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="7563:8949" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="7577:8947" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="7608:8807" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="9250:9514" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="9264:9512" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="9648:9854" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="9662:9852" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="12720:14106" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="12734:14104" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="12765:13964" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="14407:14671" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="14421:14669" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="14805:15011" placeholder="..." />
-                <marker date="1460575877888" expanded="true" signature="14819:15009" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -84,13 +52,9 @@
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Models/Ditep/Setor.php" />
         <option value="$PROJECT_DIR$/app/Models/Ditep/Cliente.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ClienteController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SetorController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ImpressoraController.php" />
         <option value="$PROJECT_DIR$/resources/views/ditep/setor/form.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/ditep/impressora/form.blade.php" />
         <option value="$PROJECT_DIR$/readme.md" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/DitepController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/ditep/blank.blade.php" />
         <option value="$PROJECT_DIR$/resources/assets/css/default.css" />
         <option value="$PROJECT_DIR$/app/Models/Ditep/Toner.php" />
@@ -99,14 +63,20 @@
         <option value="$PROJECT_DIR$/resources/views/ditep/cliente/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/ditep/impressora/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/ditep/setor/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/TonerController.php" />
         <option value="$PROJECT_DIR$/resources/views/ditep/toner/form.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/menu.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Ditep/Impressao.php" />
         <option value="$PROJECT_DIR$/resources/views/ditep/impressao/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ImpressaoController.php" />
         <option value="$PROJECT_DIR$/resources/views/ditep/impressao/form.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/ditep/testes/lab1.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/DitepController.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/ditep/lab1.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ClienteController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ImpressaoController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ImpressoraController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/SetorController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/TonerController.php" />
       </list>
     </option>
   </component>
@@ -155,6 +125,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -258,55 +229,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="ditep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ditep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ditep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ditep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ditep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ditep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impressao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -402,7 +325,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -411,13 +333,14 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\web\www\html\ditep\resources\views\ditep" />
+      <recent name="D:\web\www\html\ditep\app\Models\Ditep" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\web\www\html\ditep\resources\views\ditep\impressao" />
       <recent name="D:\web\www\html\ditep\resources\views\ditep\toner" />
       <recent name="D:\web\www\html\ditep\resources\views\ditep\setor" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\web\www\html\ditep\app\Models\Ditep" />
     </key>
   </component>
   <component name="RunManager">
@@ -464,7 +387,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -508,26 +431,22 @@
           <url>file://$PROJECT_DIR$/app/Http/Controllers/ClienteController.php</url>
           <line>4</line>
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/ImpressaoController.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/ImpressaoController.php</url>
+          <line>15</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/ditep/setor/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SetorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Ditep/Cliente.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -675,13 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ImpressoraController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -717,13 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DitepController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Ditep/Cliente.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.076923">
@@ -742,13 +647,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.735849">
           <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Ditep/Toner.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -794,13 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TonerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-47.73077">
-          <caret line="73" column="48" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Ditep/Impressao.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23407917">
@@ -822,34 +713,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SetorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9862306">
-          <caret line="64" column="77" selection-start-line="64" selection-start-column="77" selection-end-line="64" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/ditep/toner/form.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7314974">
           <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClienteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2094065">
-          <caret line="11" column="14" selection-start-line="6" selection-start-column="0" selection-end-line="11" selection-end-column="14" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19630484">
-          <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -860,42 +727,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ImpressaoController.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/Ditep/Toner.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231">
-          <caret line="28" column="90" selection-start-line="28" selection-start-column="90" selection-end-line="28" selection-end-column="90" />
-          <folding>
-            <element signature="e#40#71#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.19036955">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22844344">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/ditep/impressao/form.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4669653">
-          <caret line="116" column="127" selection-start-line="116" selection-start-column="127" selection-end-line="116" selection-end-column="127" />
+        <state vertical-scroll-proportion="0.4949608">
+          <caret line="251" column="115" selection-start-line="251" selection-start-column="115" selection-end-line="251" selection-end-column="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/ditep/lab1.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09518477">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DitepController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
           <folding>
-            <marker date="1460575877888" expanded="true" signature="2450:3836" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="2464:3834" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="2495:3694" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="4137:4401" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="4151:4399" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="4535:4741" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="4549:4739" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="7563:8949" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="7577:8947" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="7608:8807" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="9250:9514" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="9264:9512" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="9648:9854" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="9662:9852" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="12720:14106" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="12734:14104" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="12765:13964" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="14407:14671" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="14421:14669" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="14805:15011" placeholder="..." />
-            <marker date="1460575877888" expanded="true" signature="14819:15009" placeholder="..." />
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClienteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5729665">
+          <caret line="77" column="43" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SetorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4066986">
+          <caret line="78" column="35" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="35" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TonerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73564595">
+          <caret line="87" column="35" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ImpressoraController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6303828">
+          <caret line="81" column="41" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="41" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ImpressaoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7930622">
+          <caret line="39" column="32" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="32" />
+          <folding>
+            <element signature="e#40#71#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

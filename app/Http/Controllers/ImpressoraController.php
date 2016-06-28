@@ -13,11 +13,17 @@ use Validator;
 
 class ImpressoraController extends Controller
 {
+    protected $impressora;
 
-  public function getIndex()
+    public function __construct(Impressora $impressora)
+    {
+        $this->impressora = $impressora;
+    }
+
+    public function getIndex()
   {
       $titulo = strtoupper("DITEP - GESTÃO DE IMPRESSORAS");
-      $impressoras = Impressora::orderBy('id', 'desc')->paginate(15);
+      $impressoras = $this->impressora->orderBy('id', 'desc')->paginate(15);
       return view('ditep.impressora.index', compact('titulo', 'impressoras'));
   }
 //add method
@@ -37,7 +43,7 @@ class ImpressoraController extends Controller
                         ->withErrors($validator)
                         ->withInput();
       }
-      Impressora::create($dataForm);
+      $this->impressora->create($dataForm);
       return redirect ('ditep/impressoras');
   }
 
@@ -45,7 +51,7 @@ class ImpressoraController extends Controller
   public function getEdt($acao, $id)
   {
       $titulo = strtoupper("DITEP - GESTÃO DE IMPRESSORAS > editar");
-      $impressora = Impressora::find($id);
+      $impressora = $this->impressora->find($id);
       return view('ditep.impressora.form', ['id' => $id, 'impressora' => $impressora], compact('titulo', 'acao', 'id', 'impressora'));
   }
   public function postEdt(Request $request, $id)
@@ -58,7 +64,7 @@ class ImpressoraController extends Controller
                         ->withErrors($validator)
                         ->withInput();
         }
-      Impressora::where('id', $id)->update($dataForm);
+      $this->impressora->where('id', $id)->update($dataForm);
       return redirect('ditep/impressoras');
   }
 
@@ -66,14 +72,14 @@ class ImpressoraController extends Controller
   public function getDel($acao, $id)
   {
       $titulo = strtoupper("DITEP - GESTÃO DE IMPRESSORAS > deletar/excluir");
-      $impressora = Impressora::find($id);
+      $impressora = $this->impressora->find($id);
       return view('ditep.impressora.form', ['id' => $id, 'impressora' => $impressora], compact('id', 'acao', 'impressora', 'titulo'));
   }
   public function postDel(Request $request, $id)
   {
       $confirma = $request->only('confirma');
       if($confirma = true){
-        $impressora = Impressora::find($id);
+        $impressora = $this->impressora->find($id);
         $impressora->delete();
       }
       return redirect('ditep/impressoras');

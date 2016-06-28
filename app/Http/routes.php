@@ -10,8 +10,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::controller('toners', 'TonerController');
     Route::controller('impressoes', 'ImpressaoController');
       Route::get('visual', 'DitepController@visual');
-
+      Route::get('labs', 'DitepController@labs');
     Route::get('/', 'DitepController@index');
+
   });
 });
 
@@ -24,4 +25,5 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('/home', 'HomeController@index');
+
 });

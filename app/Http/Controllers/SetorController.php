@@ -12,10 +12,16 @@ use Validator;
 
 class SetorController extends Controller
 {
+    protected $setor;
+    public function __construct(Setor $setor)
+    {
+        $this->setor = $setor;
+    }
+
     public function getIndex()
     {
         $titulo = strtoupper("DITEP - GESTÃO DE SETORES");
-        $setores = setor::orderBy('id', 'desc')->paginate(15);
+        $setores = $this->setor->orderBy('id', 'desc')->paginate(15);
         return view('ditep.setor.index', compact('titulo', 'setores'));
     }
 //add method
@@ -34,7 +40,7 @@ class SetorController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         }
-        setor::create($dataForm);
+        $this->setor->create($dataForm);
         return redirect ('ditep/setores');
     }
 
@@ -42,7 +48,7 @@ class SetorController extends Controller
     public function getEdt($acao, $id)
     {
         $titulo = strtoupper('DITEP - GESTÃO DE IMPRESSORAS > editar');
-        $setor = setor::find($id);
+        $setor = $this->setor->find($id);
         return view('ditep.setor.form', ['id' => $id, 'setor' => $setor], compact('titulo', 'acao', 'id', 'setor'));
     }
     public function postEdt(Request $request, $id)
@@ -55,7 +61,7 @@ class SetorController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         }
-        setor::where('id', $id)->update($dataForm);
+        $this->setor->where('id', $id)->update($dataForm);
         return redirect('ditep/setores');
     }
 
@@ -63,14 +69,14 @@ class SetorController extends Controller
     public function getDel($acao, $id)
     {
         $titulo = strtoupper('DITEP - GESTÃO DE IMPRESSORAS > deletar/excluir');
-        $setor = setor::find($id);
+        $setor = $this->setor->find($id);
         return view('ditep.setor.form', ['id' => $id, 'setor' => $setor], compact('id', 'acao', 'setor', '$titulo'));
     }
     public function postDel(Request $request, $id)
     {
         $confirma = $request->only('confirma');
         if($confirma = true){
-            $setor = setor::find($id);
+            $setor = $this->setor->find($id);
             $setor->delete();
         }
         return redirect('ditep/setores');

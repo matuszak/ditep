@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ditep\Impressao;
+use App\Models\Ditep\Setor;
 use Illuminate\Http\Request;
 
 use DB;
@@ -16,20 +17,33 @@ use Validator;
 
 class ImpressaoController extends Controller
 {
+    protected $cliente, $impressora, $toner, $setor, $impressao;
+    public function __construct(Impressao $impressao, Cliente $cliente, Toner $toner, Setor $setor, Impressora $impressora)
+    {
+        $this->impressao = $impressao;
+        $this->impressora = $impressora;
+        $this->cliente = $cliente;
+        $this->setor = $setor;
+        $this->toner = $toner;
+    }
+
     public function getIndex()
     {
         $titulo = strtoupper("DITEP - GESTÃO DE IMPRESSÕES");
-        $impressoes = Impressao::orderBy('id')->paginate(15);
+        $impressoes = $this->impressao->orderBy('id')->paginate(15);
         return view('ditep.impressao.index', compact('titulo', 'impressoes'));
     }
 //add method
     public function getAdd()
     {
         $titulo = strtoupper('DITEP - GESTÃO DE impressÕes > adicionar');
-        $toners = Toner::orderBy('dia_recarga')->lists('dia_recarga', 'id', 'id_impressora');
-        $clientes = Cliente::orderBy('nome')->lists('nome', 'id');
-        $impressoras = Impressora::get()->lists('modelo', 'id');
-        return view('ditep.impressao.form', compact('titulo', 'clientes', 'toners', 'impressoras'));
+        $toners = $this->toner->orderBy('dia_recarga')->lists('dia_recarga', 'id', 'id_impressora');
+        $clientes = $this->cliente->orderBy('nome')->lists('nome', 'id');
+        $impressoras = $this->impressora->get()->lists('modelo', 'id');
+
+        $impres = $this->impressora->get();
+        $tons   =   $this->toner->orderBy('dia_recarga', 'desc')->get();
+        return view('ditep.impressao.form', compact('titulo', 'clientes', 'toners', 'impressoras', 'impres', 'tons'));
     }
     public function postAdd(Request $request)
     {
@@ -42,7 +56,7 @@ class ImpressaoController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         }
-        Impressao::create($dataForm);
+        $this->impressao->create($dataForm);
         return redirect ('ditep/impressoes');
     }
 
@@ -50,8 +64,8 @@ class ImpressaoController extends Controller
     public function getEdt($acao, $id)
     {
         $titulo = strtoupper('DITEP - GESTÃO DE impressÕes > editar');
-        $impressao = Impressao::find($id);
-        $setores = Setor::lists('nome', 'id');
+        $impressao = $this->impressao->find($id);
+        $setores = $this->setor->lists('nome', 'id');
         return view('ditep.impressao.form', ['id' => $id, 'impressao' => $impressao], compact('titulo', 'acao', 'id', 'impressao', 'setores'));
     }
     public function postEdt(Request $request, $id)
@@ -64,7 +78,7 @@ class ImpressaoController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         }
-        Impressao::where('id', $id)->update($dataForm);
+        $this->impressao->where('id', $id)->update($dataForm);
         return redirect('ditep/impressoes');
     }
 
@@ -72,15 +86,15 @@ class ImpressaoController extends Controller
     public function getDel($acao, $id)
     {
         $titulo = strtoupper('DITEP - GESTÃO DE impressÕes > deletar/excluir');
-        $impressao = Impressao::find($id);
-        $setores = Setor::lists('nome', 'id');
+        $impressao = $this->impressao->find($id);
+        $setores = $this->setor->lists('nome', 'id');
         return view('ditep.impressao.form', ['id' => $id, 'impressao' => $impressao], compact('id', 'acao', 'impressao', 'setores', 'titulo'));
     }
     public function postDel(Request $request, $id)
     {
         $confirma = $request->only('confirma');
         if($confirma = true){
-            $impressao = Impressao::find($id);
+            $impressao = $this->impressao->find($id);
             $impressao->delete();
         }
         return redirect('ditep/impressoes');

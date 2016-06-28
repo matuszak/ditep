@@ -13,10 +13,16 @@ use Validator;
 
 class TonerController extends Controller
 {
+    protected $toner;
+    public function __construct(Toner $toner)
+    {
+        $this->toner = $toner;
+    }
+
     public function getIndex()
     {
         $titulo = strtoupper("DITEP - GESTÃO DE toners");
-        $toners = Toner::orderBy('id', 'desc')->paginate(15);
+        $toners = $this->toner->orderBy('id', 'desc')->paginate(15);
         return view('ditep.toner.index', compact('titulo', 'toners'));
     }
 
@@ -39,7 +45,7 @@ class TonerController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         }
-        Toner::create($dataForm);
+        $this->toner->create($dataForm);
         return redirect('ditep/toners');
     }
 
@@ -47,7 +53,7 @@ class TonerController extends Controller
     public function getEdt($acao, $id)
     {
         $titulo = strtoupper('DITEP - GESTÃO DE toners > editar');
-        $toner = Toner::find($id);
+        $toner = $this->toner->find($id);
         $impressoras = Impressora::lists('modelo', 'id');
         return view('ditep.toner.form', ['id' => $id, 'toner' => $toner], compact('titulo', 'acao', 'id', 'toner', 'impressoras'));
     }
@@ -62,7 +68,7 @@ class TonerController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         }
-        Toner::where('id', $id)->update($dataForm);
+        $this->toner->where('id', $id)->update($dataForm);
         return redirect('ditep/toners');
     }
 
@@ -70,7 +76,7 @@ class TonerController extends Controller
     public function getDel($acao, $id)
     {
         $titulo = strtoupper('DITEP - GESTÃO DE toners > deletar/excluir');
-        $toner = Toner::find($id);
+        $toner = $this->toner->find($id);
         $impressoras = Impressora::lists('modelo', 'id');
         return view('ditep.toner.form', ['id' => $id, 'toner' => $toner], compact('id', 'acao', 'toner', 'impressoras', 'titulo'));
     }
@@ -79,7 +85,7 @@ class TonerController extends Controller
     {
         $confirma = $request->only('confirma');
         if ($confirma = true) {
-            $toner = Toner::find($id);
+            $toner = $this->toner->find($id);
             $toner->delete();
         }
         return redirect('ditep/toners');

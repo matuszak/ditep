@@ -22,15 +22,18 @@
             <h1 class="text-uppercase"><?php echo ($tiEDT); ?></h1><br>
             {!! Form::open( ['url' => "ditep/impressoes/edt/$impressao->id", 'class' => 'form'] ) !!}
 
-        <!--Solicita e Lista as impressoras cadastradas -->
-        {!! Form::label('id_impressora', 'Impressora') !!}
-        {!! Form::select(('id_impressora'), $impressoras, isset($impressao->id_impressora) ? $impressao->id_impressora : null, ['class' => 'form-control text-uppercase', 'aria-describeby' => 'helpBlock1'] ) !!}
-        <br>
 
-        <!-- Solicita lista Toners cadastrados -->
-        {!! Form::label('id_toner', 'Toner') !!}
-        {!! Form::select(('id_toner'), $toners, isset($impressao->id_toner) ? $impressao->id_toner : null, ['class' => 'form-control text-uppercase', 'aria-describeby' => 'helpBlock1'] ) !!}
-        <br>
+        <!--Solicita e Lista as impressoras cadastradas -->
+<?php
+       // {!! Form::label('id_impressora', 'Impressora') !!}
+       // {!! Form::select(('id_impressora'), $impressoras, isset($impressao->id_impressora) ? $impressao->id_impressora : null, ['class' => 'form-control text-uppercase', 'aria-describeby' => 'helpBlock1'] ) !!}
+       // <br>
+
+      //  <!-- Solicita lista Toners cadastrados -->
+       // {!! Form::label('id_toner', 'Toner') !!}
+       // {!! Form::select(('id_toner'), $toners, isset($impressao->id_toner) ? $impressao->id_toner : null, ['class' => 'form-control text-uppercase', 'aria-describeby' => 'helpBlock1'] ) !!}
+       // <br>
+      ?>
 
         <!-- Solicita e lista os clientes previamente cadastrados -->
         {!! Form::label('id_cliente', 'Cliente') !!}
@@ -231,15 +234,26 @@
         <h1 class="text-uppercase"><?php echo ($tiADD); ?></h1><br>
         {!! Form::open( ['url' => "ditep/impressoes/add", 'class' => 'form'] ) !!}
 
-        <!--Solicita e Lista as impressoras cadastradas -->
-        {!! Form::label('id_impressora', 'Impressora') !!}
-        {!! Form::select(('id_impressora'), $impressoras, isset($impressao->id_impressora) ? $impressao->id_impressora : null, ['class' => 'form-control text-uppercase', 'aria-describeby' => 'helpBlock1'] ) !!}
-        <br>
+        <?php
+        // {!! Form::label('id_impressora', 'Impressora') !!}
+        // {!! Form::select(('id_impressora'), $impressoras, isset($impressao->id_impressora) ? $impressao->id_impressora : null, ['class' => 'form-control text-uppercase', 'aria-describeby' => 'helpBlock1'] ) !!}
+        // <br>
 
-        <!-- Solicita lista Toners cadastrados -->
-        {!! Form::label('id_toner', 'Toner') !!}
-        {!! Form::select(('id_toner'), $toners, isset($impressao->id_toner) ? $impressao->id_toner : null, ['class' => 'form-control text-uppercase', 'aria-describeby' => 'helpBlock1'] ) !!}
-        <br>
+        //  <!-- Solicita lista Toners cadastrados -->
+        // {!! Form::label('id_toner', 'Toner') !!}
+        // {!! Form::select(('id_toner'), $toners, isset($impressao->id_toner) ? $impressao->id_toner : null, ['class' => 'form-control text-uppercase', 'aria-describeby' => 'helpBlock1'] ) !!}
+        // <br>
+        ?>
+
+        <!-- solicitar lista de impressoras e toners tentativas -->
+        {!! Form::label('id_impressora', 'Toner e Impressora') !!}
+        <select name="id_toner" id="id_toner">
+            @foreach ($tons as $ton)
+                <option value="{{ $ton->id }}">{{ $ton->dia_recarga }} - {{ $ton->getImpressoraModelo() }}</option>
+
+            @endforeach
+        </select>
+<br><br>
 
         <!-- Solicita e lista os clientes previamente cadastrados -->
         {!! Form::label('id_cliente', 'Cliente') !!}
@@ -323,7 +337,7 @@
 
         <!-- Solicita a data de impressão -->
         {!! Form::label('imp_data', 'Data que ocorreu essa impressão') !!}
-        {!! Form::text('imp_data', isset($impressao->imp_data) ? $impressao->imp_data : $dataAtual, ['class' => 'form-control', 'disabled'] ) !!}
+        {!! Form::text('imp_data', isset($impressao->imp_data) ? $impressao->imp_data : $dataAtual, ['class' => 'form-control'] ) !!}
         <br>
         <br>
         <!--botao Novo -->

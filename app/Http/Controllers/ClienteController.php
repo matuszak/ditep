@@ -13,18 +13,26 @@ use Validator;
 
 class ClienteController extends Controller
 {
-  public function getIndex()
+    protected $cliente, $setor;
+
+    public function __construct(Cliente $cliente, Setor $setor)
+    {
+        $this->cliente  =    $cliente;
+        $this->setor    =      $setor;
+    }
+
+    public function getIndex()
   {
       $titulo = strtoupper("DITEP - GESTÃO DE CLIENTES");
-      $clientes = Cliente::orderBy('nome')->paginate(15);
+      $clientes = $this->cliente->orderBy('nome')->paginate(15);
       return view('ditep.cliente.index', compact('titulo', 'clientes'));
   }
 //add method
   public function getAdd()
   {
       $titulo = strtoupper('DITEP - GESTÃO DE CLIENTES > adicionar');
-      //$setores = Setor::orderBy('nome')->lists('nome', 'id');
-      $setores = Setor::orderBy('nome')->lists('nome', 'id');
+      //$setores = $this->setor->orderBy('nome')->lists('nome', 'id');
+      $setores = $this->setor->orderBy('nome')->lists('nome', 'id');
       return view('ditep.cliente.form', compact('titulo', 'setores'));
   }
   public function postAdd(Request $request)
@@ -37,7 +45,7 @@ class ClienteController extends Controller
                         ->withErrors($validator)
                         ->withInput();
       }
-      Cliente::create($dataForm);
+      $this->cliente->create($dataForm);
       return redirect ('ditep/clientes');
   }
 
@@ -45,8 +53,8 @@ class ClienteController extends Controller
   public function getEdt($acao, $id)
   {
       $titulo = strtoupper('DITEP - GESTÃO DE CLIENTES > editar');
-      $cliente = Cliente::find($id);
-      $setores = Setor::lists('nome', 'id');
+      $cliente = $this->cliente->find($id);
+      $setores = $this->setor->lists('nome', 'id');
       return view('ditep.cliente.form', ['id' => $id, 'cliente' => $cliente], compact('titulo', 'acao', 'id', 'cliente', 'setores'));
   }
   public function postEdt(Request $request, $id)
@@ -59,7 +67,7 @@ class ClienteController extends Controller
                         ->withErrors($validator)
                         ->withInput();
         }
-      Cliente::where('id', $id)->update($dataForm);
+      $this->cliente->where('id', $id)->update($dataForm);
       return redirect('ditep/clientes');
   }
 
@@ -67,15 +75,15 @@ class ClienteController extends Controller
   public function getDel($acao, $id)
   {
       $titulo = strtoupper('DITEP - GESTÃO DE CLIENTES > deletar/excluir');
-      $cliente = Cliente::find($id);
-      $setores = Setor::lists('nome', 'id');
+      $cliente = $this->cliente->find($id);
+      $setores = $this->setor->lists('nome', 'id');
       return view('ditep.cliente.form', ['id' => $id, 'cliente' => $cliente], compact('id', 'acao', 'cliente', 'setores', 'titulo'));
   }
   public function postDel(Request $request, $id)
   {
       $confirma = $request->only('confirma');
       if($confirma = true){
-        $cliente = Cliente::find($id);
+        $cliente = $this->cliente->find($id);
         $cliente->delete();
       }
       return redirect('ditep/clientes');

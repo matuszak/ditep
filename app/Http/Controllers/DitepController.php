@@ -16,4 +16,7 @@ class DitepController extends Controller
     public function visual() {
         return view('layouts.ditep.blank');
     }
+    public function labs(){
+        return view('ditep.lab1');
+    }
 }
