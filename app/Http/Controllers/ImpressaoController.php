@@ -20,11 +20,11 @@ class ImpressaoController extends Controller
     protected $cliente, $impressora, $toner, $setor, $impressao;
     public function __construct(Impressao $impressao, Cliente $cliente, Toner $toner, Setor $setor, Impressora $impressora)
     {
-        $this->impressao = $impressao;
-        $this->impressora = $impressora;
-        $this->cliente = $cliente;
-        $this->setor = $setor;
-        $this->toner = $toner;
+        $this->impressao    = $impressao;
+        $this->impressora   = $impressora;
+        $this->cliente      = $cliente;
+        $this->setor        = $setor;
+        $this->toner        = $toner;
     }
 
     public function getIndex()
@@ -48,7 +48,7 @@ class ImpressaoController extends Controller
     public function postAdd(Request $request)
     {
 
-    dd($dataForm = $request->all());
+    $dataForm = $request->all();
     //validação
         $validator = validator($dataForm, Impressao::$rules);
         if( $validator->fails() ){
@@ -56,7 +56,8 @@ class ImpressaoController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         }
-        $this->impressao->create($dataForm);
+        dd($dataForm->rel());
+        dd($this->impressao->create($dataForm));
         return redirect ('ditep/impressoes');
     }
 

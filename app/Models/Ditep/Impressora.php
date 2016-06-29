@@ -12,4 +12,8 @@ class impressora extends Model
     static $rules = [
       'modelo' => 'required|min:3|max:30',
     ];
+
+    public function rel(){
+        return $this->hasMany('App\Models\Ditep\Toner', 'id_impressora');
+    }
 }

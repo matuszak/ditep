@@ -93,6 +93,16 @@
                     38 => 38,
                     39 => 39,
                     40 => 40,
+                    41 => 41,
+                    42 => 42,
+                    43 => 43,
+                    44 => 44,
+                    45 => 45,
+                    46 => 46,
+                    47 => 47,
+                    48 => 48,
+                    49 => 49,
+                    50 => 50,
                 ], isset($impressao->imp_laudas) ? $impressao->imp_laudas : 1, ['class' => 'form-control text-uppercase', 'aria-describeby' => 'helpBlock1']) !!}
         <span id="helpBlock1" class="help-block">{{ 'Caso seja apenas 1 (uma) cópia, ignore este campo deixe o cursor em: 1 (um) número padrão'}} </span>
         <br>
@@ -119,6 +129,11 @@
         {!! Form::label('imp_data', 'Data que ocorreu essa impressão') !!}
         {!! Form::text('imp_data', isset($impressao->imp_data) ? $impressao->imp_data : $dataAtual, ['class' => 'form-control',] ) !!}
         <br>
+
+        {!! Form::label('imp_obs', 'Observação(ões)') !!}
+        {!! Form::textarea('imp_obs', isset($impressao->imp_obs) ? $impressao->imp_obs : null, [ 'class' => 'form-control' ]) !!}
+
+        <br>
         <br>
 
            <br>
@@ -128,7 +143,8 @@
         <!-- AÇÃO DE DELETAR/APAGAR -->
             <h1 class="text-uppercase"><?php echo ($tiDEL); ?></h1><br>
             {!! Form::open( ['url' => "ditep/impressoes/del/$impressao->id", 'class' => 'form'] ) !!}
-                    <!--Solicita e Lista as impressoras cadastradas -->
+
+        <!--Solicita e Lista as impressoras cadastradas -->
         {!! Form::label('id_impressora', 'Impressora') !!}
         {!! Form::select(('id_impressora'), $impressoras, isset($impressao->id_impressora) ? $impressao->id_impressora : null, ['class' => 'form-control text-uppercase', 'aria-describeby' => 'helpBlock1'] ) !!}
         <br>
@@ -196,6 +212,16 @@
                     38 => 38,
                     39 => 39,
                     40 => 40,
+                    41 => 41,
+                    42 => 42,
+                    43 => 43,
+                    44 => 44,
+                    45 => 45,
+                    46 => 46,
+                    47 => 47,
+                    48 => 48,
+                    49 => 49,
+                    50 => 50,
                 ], isset($impressao->imp_laudas) ? $impressao->imp_laudas : 1, ['class' => 'form-control text-uppercase', 'aria-describeby' => 'helpBlock1']) !!}
         <span id="helpBlock1" class="help-block">{{ 'Caso seja apenas 1 (uma) cópia, ignore este campo deixe o cursor em: 1 (um) número padrão'}} </span>
         <br>
@@ -222,6 +248,11 @@
         {!! Form::label('imp_data', 'Data que ocorreu essa impressão') !!}
         {!! Form::text('imp_data', isset($impressao->imp_data) ? $impressao->imp_data : $dataAtual, ['class' => 'form-control', 'disabled'] ) !!}
         <br>
+
+        {!! Form::label('imp_obs', 'Observação(ões)') !!}
+        {!! Form::textarea('imp_obs', isset($impressao->imp_obs) ? $impressao->imp_obs : null, [ 'class' => 'form-control' ]) !!}
+
+        <br>
         <br>
 
             <br>
@@ -234,26 +265,26 @@
         <h1 class="text-uppercase"><?php echo ($tiADD); ?></h1><br>
         {!! Form::open( ['url' => "ditep/impressoes/add", 'class' => 'form'] ) !!}
 
-        <?php
-        // {!! Form::label('id_impressora', 'Impressora') !!}
-        // {!! Form::select(('id_impressora'), $impressoras, isset($impressao->id_impressora) ? $impressao->id_impressora : null, ['class' => 'form-control text-uppercase', 'aria-describeby' => 'helpBlock1'] ) !!}
-        // <br>
 
-        //  <!-- Solicita lista Toners cadastrados -->
-        // {!! Form::label('id_toner', 'Toner') !!}
-        // {!! Form::select(('id_toner'), $toners, isset($impressao->id_toner) ? $impressao->id_toner : null, ['class' => 'form-control text-uppercase', 'aria-describeby' => 'helpBlock1'] ) !!}
-        // <br>
-        ?>
+         {!! Form::label('id_impressora', 'Impressora') !!}
+         {!! Form::select(('id_impressora'), $impressoras, isset($impressao->id_impressora) ? $impressao->id_impressora : null, ['class' => 'form-control text-uppercase', 'aria-describeby' => 'helpBlock1'] ) !!}
+         <br>
 
-        <!-- solicitar lista de impressoras e toners tentativas -->
+        <!-- Solicita lista Toners cadastrados -->
+        {!! Form::label('id_toner', 'Toner') !!}
+        {!! Form::select(('id_toner'), $toners, isset($impressao->id_toner) ? $impressao->id_toner : null, ['class' => 'form-control text-uppercase', 'aria-describeby' => 'helpBlock1'] ) !!}
+        <br>
+
+
+        <!-- solicitar lista de impressoras e toners tentativas
         {!! Form::label('id_impressora', 'Toner e Impressora') !!}
-        <select name="id_toner" id="id_toner">
+        <select name="id_toner" id="id_toner" class="form-control">
             @foreach ($tons as $ton)
-                <option value="{{ $ton->id }}">{{ $ton->dia_recarga }} - {{ $ton->getImpressoraModelo() }}</option>
+                <option value="{{ $ton->id }}">{{ $ton->dia_recarga }} >> {{ $ton->getImpressoraModelo() }}</option>
 
             @endforeach
         </select>
-<br><br>
+        <br><br>-->
 
         <!-- Solicita e lista os clientes previamente cadastrados -->
         {!! Form::label('id_cliente', 'Cliente') !!}
@@ -313,6 +344,16 @@
                     38 => 38,
                     39 => 39,
                     40 => 40,
+                    41 => 41,
+                    42 => 42,
+                    43 => 43,
+                    44 => 44,
+                    45 => 45,
+                    46 => 46,
+                    47 => 47,
+                    48 => 48,
+                    49 => 49,
+                    50 => 50,
                 ], isset($impressao->imp_laudas) ? $impressao->imp_laudas : 1, ['class' => 'form-control text-uppercase', 'aria-describeby' => 'helpBlock1']) !!}
         <span id="helpBlock1" class="help-block">{{ 'Caso seja apenas 1 (uma) cópia, ignore este campo deixe o cursor em: 1 (um) número padrão'}} </span>
         <br>
@@ -338,6 +379,9 @@
         <!-- Solicita a data de impressão -->
         {!! Form::label('imp_data', 'Data que ocorreu essa impressão') !!}
         {!! Form::text('imp_data', isset($impressao->imp_data) ? $impressao->imp_data : $dataAtual, ['class' => 'form-control'] ) !!}
+        <br>
+        {!! Form::label('imp_obs', 'Observação(ões)') !!}
+        {!! Form::textarea('imp_obs', isset($impressao->imp_obs) ? $impressao->imp_obs : "", [ 'class' => 'form-control' ]) !!}
         <br>
         <br>
         <!--botao Novo -->
